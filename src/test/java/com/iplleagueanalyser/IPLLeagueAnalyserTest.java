@@ -239,4 +239,16 @@ public class IPLLeagueAnalyserTest {
 	}
 	// this test case checks for Player with maximum 100 and best batting average
 
+	@Test
+	public void givenBattingCSVfile_ShouldReturnPlayerWithZero100sAand50sButBestBattibgAvgs() {
+		try {
+			batsmen = obj.readData(BATSMEN_CSV_FILE, "BATSMEN");
+		} catch (IPLLeagueAnalyserException e) {
+			e.printStackTrace();
+		}
+		l1 = c1.sortBychoice(Choice.ZERO_100S_AND_50S_BUT_BEST_BAT_AVG, batsmen);
+		Assert.assertEquals("Marcus Stoinis", l1.get(0).player);
+	}
+	// this test case checks for Player with zero hundreds and fifties but best
+	// batting average
 }
