@@ -11,7 +11,7 @@ import com.csvbuilder.CSVBuilderFactory;
 import com.csvbuilder.ICSVBuilder;
 import com.iplleagueanalyser.IPLLeagueAnalyserException.ExceptionType;
 
-//UC10 - bowler with best Strike rate and max wickets
+//UC11 - bowlers with best average and best strike rate
 public class IPLLeagueAnalyserExecuter<T> {
 
 	public static List<IPLLeagueBatsmen> batsmenList;
