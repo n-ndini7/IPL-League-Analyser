@@ -159,4 +159,16 @@ public class IPLLeagueAnalyserTest {
 	}
 	// this test case checks for top Economy rate bowler
 
+	@Test
+	public void givenBowlingCSVfileReturnTopStrikeRateBowlerWithMaximumWickets() {
+		try {
+			bowlers = obj.readData(BOWLERS_CSV_FILE, "BOWLERS");
+		} catch (IPLLeagueAnalyserException e) {
+			e.printStackTrace();
+		}
+		l2 = c1.sortBychoice(Choice.BEST_SR_AND_WKTS, bowlers);
+		Assert.assertEquals("Alzarri Joseph", l2.get(0).player);
+	}
+	// this test case checks for top Economy rate bowler
+
 }
