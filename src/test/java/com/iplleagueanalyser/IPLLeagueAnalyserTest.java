@@ -110,4 +110,17 @@ public class IPLLeagueAnalyserTest {
 	}
 	// this test case checks for Player with maximum average and striking
 	// rate
+
+	@Test
+	public void givenBattingCSVfile_ShouldReturnPlayerWithMaximumrunsAndBestAverage() {
+		try {
+			batsmen = obj.readData(BATSMEN_CSV_FILE, "BATSMEN");
+		} catch (IPLLeagueAnalyserException e) {
+			e.printStackTrace();
+		}
+		l1 = c1.sortBychoice(Choice.MAX_RUNS_AND_BEST_AVG, batsmen);
+		Assert.assertEquals("David Warner", l1.get(0).player);
+	}
+	// this test case checks for Player with maximum runs and best average
+
 }
