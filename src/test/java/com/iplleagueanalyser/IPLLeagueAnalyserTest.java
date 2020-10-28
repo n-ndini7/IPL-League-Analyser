@@ -123,4 +123,16 @@ public class IPLLeagueAnalyserTest {
 	}
 	// this test case checks for Player with maximum runs and best average
 
+	@Test
+	public void givenBowlingCSVfileReturnTopAverageBowler() {
+		try {
+			bowlers = obj.readData(BOWLERS_CSV_FILE, "BOWLERS");
+		} catch (IPLLeagueAnalyserException e) {
+			e.printStackTrace();
+		}
+		l2 = c1.sortBychoice(Choice.BOWL_AVG, bowlers);
+		Assert.assertEquals("11", l2.get(0).avg);
+	}
+	// this test case checks for top bowling average bowler
+
 }
