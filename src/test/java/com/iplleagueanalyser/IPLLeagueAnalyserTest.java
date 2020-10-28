@@ -147,4 +147,16 @@ public class IPLLeagueAnalyserTest {
 	}
 	// this test case checks for top Striking rate bowler
 
+	@Test
+	public void givenBowlingCSVfileReturnTopEconomyRateBowler() {
+		try {
+			bowlers = obj.readData(BOWLERS_CSV_FILE, "BOWLERS");
+		} catch (IPLLeagueAnalyserException e) {
+			e.printStackTrace();
+		}
+		l2 = c1.sortBychoice(Choice.BOWL_ECON, bowlers);
+		Assert.assertEquals("Shivam Dube", l2.get(0).player);
+	}
+	// this test case checks for top Economy rate bowler
+
 }
