@@ -11,7 +11,7 @@ import com.csvbuilder.CSVBuilderFactory;
 import com.csvbuilder.ICSVBuilder;
 import com.iplleagueanalyser.IPLLeagueAnalyserException.ExceptionType;
 
-//Master branch - start --- load csv files with welcome message
+//UC1 - top batting average
 public class IPLLeagueAnalyserExecuter<T> {
 
 	public static List<IPLLeagueBatsmen> batsmenList;
@@ -56,11 +56,6 @@ public class IPLLeagueAnalyserExecuter<T> {
 					"Invalid file location given!! \nInvalidFilePAthException thrown...");
 		}
 
-	}
-
-	public static void main(String[] args) {
-		System.out.println("Welcome to IPL league Analyser");
-		System.out.println("-------------------------------");
 	}
 
 }

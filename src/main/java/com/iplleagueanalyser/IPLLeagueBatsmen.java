@@ -32,6 +32,13 @@ public class IPLLeagueBatsmen {
 	@CsvBindByName(column = "6s")
 	public String sixes;
 
+	public double Average() {
+		if (avg.equals("-") || avg == "")
+			this.avg = "0";
+		double average = Double.parseDouble(this.avg);
+		return average;
+	}
+
 	@Override
 	public String toString() {
 		return "Batsman-- \nPosition: " + pos + " Player :" + player + " Matches: " + matches + " Innings: " + innings
