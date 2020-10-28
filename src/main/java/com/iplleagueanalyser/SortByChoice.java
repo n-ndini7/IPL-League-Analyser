@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-//this class performs the sort operation
+//this class performs the sort operation for batsmen,bowlers and all rounders
 public class SortByChoice<T> {
 
 	public enum Choice {
