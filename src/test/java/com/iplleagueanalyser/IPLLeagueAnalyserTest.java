@@ -84,4 +84,18 @@ public class IPLLeagueAnalyserTest {
 		Assert.assertEquals("Andre Russell", l1.get(0).player);
 	}
 	// this test case checks for Player with maximum sixes
+
+	@Test
+	public void givenBattingCSVfile_ShouldReturnPlayerWithMaximumBoundariesAndBestSR() {
+		try {
+			batsmen = obj.readData(BATSMEN_CSV_FILE, "BATSMEN");
+		} catch (IPLLeagueAnalyserException e) {
+			e.printStackTrace();
+		}
+		l1 = c1.sortBychoice(Choice.MAX_BOUNDARIES_AND_SR, batsmen);
+		Assert.assertEquals("Ishant Sharma", l1.get(0).player);
+	}
+	// this test case checks for Player with maximum boundaries and best striking
+	// rate
+
 }

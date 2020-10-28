@@ -11,7 +11,7 @@ import com.csvbuilder.CSVBuilderFactory;
 import com.csvbuilder.ICSVBuilder;
 import com.iplleagueanalyser.IPLLeagueAnalyserException.ExceptionType;
 
-//UC3 - batsman with maximum fours and sixes 
+//UC4 - batsman with best striking rate and boundaries 
 public class IPLLeagueAnalyserExecuter<T> {
 
 	public static List<IPLLeagueBatsmen> batsmenList;
