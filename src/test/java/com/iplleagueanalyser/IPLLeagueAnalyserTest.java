@@ -49,4 +49,15 @@ public class IPLLeagueAnalyserTest {
 	}
 	// this test case checks for top batting average batsman
 
+	@Test
+	public void givenBattingCSVfileReturnTopStrikingRateBatsman() {
+		try {
+			batsmen = obj.readData(BATSMEN_CSV_FILE, "BATSMEN");
+		} catch (IPLLeagueAnalyserException e) {
+			e.printStackTrace();
+		}
+		l1 = c1.sortBychoice(Choice.STRIKE_RATE, batsmen);
+		Assert.assertEquals("333.33", l1.get(0).strikeRate);
+	}
+	// this test case checks for top Striking rate batsman
 }

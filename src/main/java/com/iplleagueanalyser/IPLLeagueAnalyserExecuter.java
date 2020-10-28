@@ -11,7 +11,7 @@ import com.csvbuilder.CSVBuilderFactory;
 import com.csvbuilder.ICSVBuilder;
 import com.iplleagueanalyser.IPLLeagueAnalyserException.ExceptionType;
 
-//UC1 - top batting average
+//UC2 - best strike rate batsman
 public class IPLLeagueAnalyserExecuter<T> {
 
 	public static List<IPLLeagueBatsmen> batsmenList;
