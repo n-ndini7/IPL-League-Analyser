@@ -17,6 +17,7 @@ public class IPLLeagueAnalyserTest {
 	public SortByChoice c1;
 	public List<IPLLeagueBatsmen> l1 = null;
 	public List<IPLLeagueBowlers> l2 = null;
+	public List<IPLLeagueAllRounder> l3 = null;
 
 	public IPLLeagueAnalyserTest() {
 		obj = new IPLLeagueAnalyserExecuter();
@@ -196,4 +197,18 @@ public class IPLLeagueAnalyserTest {
 	}
 	// this test case checks for bowler with best strike rate and best average
 
+	@Test
+	public void givenBattingandbowlingfileReturnBestBattingAndBowlingAverages() {
+		try {
+			bowlers = obj.readData(BOWLERS_CSV_FILE, "BOWLERS");
+			batsmen = obj.readData(BATSMEN_CSV_FILE, "BATSMEN");
+		} catch (IPLLeagueAnalyserException e) {
+			e.printStackTrace();
+		}
+		l3 = c1.getAllRounderPlayers(batsmen, bowlers);
+		List<IPLLeagueAllRounder> l4 = c1.sortBychoice(Choice.MAX_BAT_AND_BOWL_AVG, l3);
+		Assert.assertEquals("Krishnappa Gowtham", l4.get(0).Player());
+	}
+
+	// this teset case checks for best batting and bowling average
 }
