@@ -52,6 +52,15 @@ public class IPLLeagueBowlers {
 		return econ;
 	}
 
+	public int Total4wsAnd5ws() {
+		if (fourWickets.equals("-") || fourWickets == "")
+			fourWickets = "0";
+		if (fiveWickets.equals("-") || fiveWickets == "")
+			fiveWickets = "0";
+		int wkts = Integer.parseInt(fourWickets) + Integer.parseInt(fiveWickets);
+		return wkts;
+	}
+
 	@Override
 	public String toString() {
 		return "Bowlers-- \nPosition: " + pos + " Player :" + player + " Matches: " + matches + " Innings: " + innings
